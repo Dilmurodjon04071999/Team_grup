@@ -1,41 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>GitHub Profiles</title>
-  <link rel="stylesheet" href="./stayle.css" />
+<meta charset="UTF-8">
+<title>Boydoq Soati 😂</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: #fff;
+        text-align: center;
+        margin-top: 100px;
+    }
+    #time {
+        font-size: 60px;
+        margin-bottom: 30px;
+    }
+    #message {
+        font-size: 26px;
+        color: #ffe066;
+    }
+</style>
 </head>
 <body>
-  <main class="card">
-    <header>
-      <div class="logo">GH</div>
-      <div>
-        <h1>GitHub Profiles</h1>
-        <p class="sub">Quyidagi tugmalardan biriga bosib, tegishli GitHub sahifasiga o‘ting.</p>
-      </div>
-    </header>
 
-    <div class="buttons">
-      <button class="btn" data-url="https://github.com/Dilmurodjon04071999">
-        <span class="dot"></span> Dilmurodjon04071999
-      </button> 
+<div id="time"></div>
+<div id="message"></div>
 
-      <button class="btn" data-url="https://github.com/Artikov-dev">
-        <span class="dot"></span> Artikov-dev
-      </button>
+<script>
+    const messages = [
+        "Boydoqlik — bu vaqtinchalik… deyishadi. Kim bilsin? 😂",
+        "Hali ham yakkasanmi? Soat buni tasdiqladi 🤣",
+        "Hammasi yaxshi bo‘ladi… balki 😅",
+        "Sabr qil, muhabbat ham yo‘lga chiqqan bo‘lsa kerak 🚌",
+        "Pul bor, vaqt bor… faqat romantika yo‘q 😂",
+        "Bugun ham hech kim telefon qilmagan… normal holat 😎",
+        "Boydoq — lekin baxtli! 🌚"
+    ];
 
-      <button class="btn" data-url="https://github.com/olimjonzero">
-        <span class="dot"></span> Olimjon
-      </button>
-    </div>
+    function updateClock() {
+        const now = new Date();
+        document.getElementById("time").textContent =
+            now.toLocaleTimeString();
 
-    <footer>
-      <div class="small">Maslahat: `data-url` ichiga to‘liq GitHub profil linklarini yozing.</div>
-    </footer>
-  </main>
+        // har soniyada random mesaj
+        document.getElementById("message").textContent =
+            messages[Math.floor(Math.random() * messages.length)];
+    }
 
-  <!-- JS body oxirida -->
-  <script src="./script.js"></script>
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
 </body>
 </html>
