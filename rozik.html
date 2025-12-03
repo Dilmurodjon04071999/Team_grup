@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Tic Tac Toe</title>
+		<link rel="stylesheet" href="./tictac.css" />
+	</head>
+	<body>
+		<main class="ttt-card">
+			<header class="ttt-header">
+				<h1>Tic Tac Toe</h1>
+				<p class="ttt-sub">Two players — click a cell to play. First to 3 in a row wins.</p>
+			</header>
+
+			<section class="ttt-board" id="board">
+				<!-- 9 cells -->
+				<button class="cell" data-index="0"></button>
+				<button class="cell" data-index="1"></button>
+				<button class="cell" data-index="2"></button>
+				<button class="cell" data-index="3"></button>
+				<button class="cell" data-index="4"></button>
+				<button class="cell" data-index="5"></button>
+				<button class="cell" data-index="6"></button>
+				<button class="cell" data-index="7"></button>
+				<button class="cell" data-index="8"></button>
+			</section>
+
+			<div class="ttt-info">
+				<div class="status" id="status">Current: <span id="player">X</span></div>
+				<div class="controls">
+					<button id="restart" class="btn">Restart</button>
+					<button id="resetScore" class="btn ghost">Reset Score</button>
+				</div>
+			</div>
+
+			<footer class="ttt-footer">
+				<div class="score">
+					<span>X: <strong id="scoreX">0</strong></span>
+					<span>O: <strong id="scoreO">0</strong></span>
+					<span>Ties: <strong id="scoreT">0</strong></span>
+				</div>
+			</footer>
+		</main>
+
+		<script src="./tictac.js" defer></script>
+	</body>
+</html>
+
